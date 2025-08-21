@@ -137,14 +137,14 @@ jobs:
 
       - name: Initialize CodeQL
         if: matrix.tool == 'codeql'
-        uses: github/codeql-action/init@60bf7dfc0e0f517d51b3c5d3d432f1cf7934eff1
+        uses: github/codeql-action/init@5b49155c7f37b5ec074ffd26b428e6b64b1bf412
         with:
           languages: javascript-typescript
 
       # --- MODIFICATION 1: Control the output directory ---
       - name: Perform CodeQL Analysis
         if: matrix.tool == 'codeql'
-        uses: github/codeql-action/analyze@60bf7dfc0e0f517d51b3c5d3d432f1cf7934eff1
+        uses: github/codeql-action/analyze@5b49155c7f37b5ec074ffd26b428e6b64b1bf412
         with:
           category: "/language:javascript"
           # This line tells CodeQL where to save the SARIF file.
